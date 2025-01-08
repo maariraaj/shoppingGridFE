@@ -1,0 +1,13 @@
+.home {
+  display: flex;
+}
+
+.side-navbar-container {
+  width: 250px;
+  flex-shrink: 0;
+}
+
+.product-list-container {
+  flex-grow: 1;
+  padding: 20px;
+}

@@ -1,0 +1,73 @@
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 1.5rem;
+  background-color: #333;
+  color: white;
+  font-size: 1.2rem;
+  height: 80px;
+  box-sizing: border-box;
+}
+
+.navbar-left {
+  display: flex;
+  align-items: center;
+  font-family: cursive;
+  font-style: italic;
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-left: 20px;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.navbar-left:hover {
+  transform: scale(1.1);
+  color: teal;
+}
+
+.navbar-right {
+  display: flex;
+  align-items: center;
+  position: relative;
+  margin-right: 1.5rem;
+  gap: 10px;
+}
+
+.cart-icon {
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.cart-count {
+  position: absolute;
+  top: -10px;
+  right: -12px;
+  background-color: white;
+  color: teal;
+  font-size: 0.85rem;
+  font-weight: bold;
+  border-radius: 50%;
+  padding: 5px 9px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+  z-index: 10;
+}
+
+@keyframes cartAnimation {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.3);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.cart-icon.animate,
+.cart-count.animate {
+  animation: cartAnimation 0.5s ease;
+}
